@@ -1,5 +1,6 @@
-function dummy_output = dsmceqMOD(npart,nstep) %MOD
+function dummy_output = dsmceqMOD(npart,nstep)	%MOD
 % dsmceqMOD - Dilute gas simulation using DSMC algorithm %MOD
+% invoke as:  dsmceqMOD(5000,100)		%MOD
 % This version illustrates the approach to equilibrium
 % npart is the number of simulation particles	%MOD
 % nstep is the total number of time steps	%MOD
