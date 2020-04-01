@@ -6,7 +6,7 @@ help orbit; %MOD
 % v0 is the initial tangential velocity in [AU/yr].
 % nstep is the number of steps
 % tau is the time step in [yr]
-% NumericalMethod can be selected 1 through 3
+% NumericalMethod can be selected 1 through 4
 %   - Method 1 uses Euler
 %   - Method 2 uses Euler-Cromer
 %   - Method 3 uses Runge-Kutta
