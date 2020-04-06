@@ -1,10 +1,18 @@
+function answer = lorenzMOD(state,r,nstep)        %MOD
 % lorenz - Program to compute the trajectories of the Lorenz 
 % equations using the adaptive Runge-Kutta method.
-clear;  help lorenz;
+% clear;  help lorenz;       %MOD
+% invoke as lorenzMOD([0.2152 0 -1],10,600)     %MOD
+% Input                                         %MOD
+% state = Intial starting point (x, y, z)       %MOD
+% r = parameter r value                         %MOD
+% nstep = no. of time-steps                     %MOD 
+% Original by AJG; modified by TEJ PATEL on 20200405     %MOD
+help lorenzMOD;             %MOD
 
 %% * Set initial state x,y,z and parameters r,sigma,b
-state = input('Enter the initial position [x y z]: ');
-r = input('Enter the parameter r: '); 
+% state = input('Enter the initial position [x y z]: '); %MOD
+% r = input('Enter the parameter r: ');         %MOD
 sigma = 10.;   % Parameter sigma
 b = 8./3.;     % Parameter b
 param = [r sigma b];  % Vector of parameters passed to rka
@@ -13,7 +21,7 @@ err = 1.e-3;   % Error tolerance
 
 %% * Loop over the desired number of steps
 time = 0;
-nstep = input('Enter number of steps: ');
+% nstep = input('Enter number of steps: ');         %MOD
 for istep=1:nstep
 
   %* Record values for plotting
@@ -32,7 +40,7 @@ end
 %% * Print max and min time step returned by rka
 fprintf('Adaptive time step: Max = %g,  Min = %g \n', ...
            max(tauplot(2:nstep)), min(tauplot(2:nstep)));
-
+warning('off')              %MOD
 %% * Graph the time series x(t)
 figure(1); clf;  % Clear figure 1 window and bring forward
 plot(tplot,xplot,'-')
@@ -51,3 +59,5 @@ view([30 20]);  % Rotate to get a better view
 grid;           % Add a grid to aid perspective
 xlabel('x'); ylabel('y'); zlabel('z');
 title('Lorenz model phase space');
+
+return;
