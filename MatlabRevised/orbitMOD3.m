@@ -70,7 +70,7 @@ end
 
 %% * Graph the trajectory of the comet.
 figure(1); clf;  % Clear figure 1 window and bring forward
-polarplot(thplot,rplot,'+');  % Use polar plot for graphing orbit   %MOD
+polarplot(thplot,rplot,'+');  % Use polar plot for graphing orbit  %MOD
 title('Distance (AU)');                                         %MOD
 %xlabel('Distance (AU)');  grid;                                %MOD
 pause(1)   % Pause for 1 second before drawing next plot
